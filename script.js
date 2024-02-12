@@ -5,15 +5,15 @@ let timeData = [
   "11 PM",
   "7 AM",
   "3 PM",
-  "9 PM",
-  "5 AM",
-  "1 PM",
   "1 AM",
   "9 AM",
   "5 PM",
+  "9 PM",
+  "5 AM",
+  "1 PM",
 ];
 
-let timeData_toUse = [23, 7, 15, 21, 5, 13, 1, 9, 17];
+let timeData_toUse = [23, 7, 15, 1, 9, 17, 21, 5, 13];
 
 for (let i = 0; i < 9; i++) {
   let now = new Date();
@@ -30,7 +30,7 @@ for (let i = 0; i < 9; i++) {
 
 let min_time = Math.min(...min_time_array);
 
-let medic_index = Math.floor(min_time_array.indexOf(min_time) / 3) + 1;
+let medic_index = Math.floor(min_time_array.indexOf(min_time) / 3);
 
 div_time_data.innerHTML = `The next medic is : ${
   medic_array[medic_index]
