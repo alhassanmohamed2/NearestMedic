@@ -34,7 +34,7 @@ let medic_index = Math.floor(min_time_array.indexOf(min_time) / 3) + 1;
 
 div_time_data.innerHTML = `The next medic is : ${
   medic_array[medic_index]
-} and It's after About ${(min_time / 3600000).toFixed(0)} Hour and ${(
+} and It's after About ${Math.floor(min_time / 3600000)} Hour and ${(
   ((min_time / 3600000) % 1) *
   60
 ).toFixed(2)} min and It's Time is ${
